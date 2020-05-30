@@ -13,3 +13,5 @@ and then
 > npm start
 
 to get the game running at localhost:3000. 
+
+You should then be able to login in through auth0 and play with other online players through the leaderboard.

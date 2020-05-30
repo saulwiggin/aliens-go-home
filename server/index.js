@@ -8,8 +8,14 @@ const client = jwksClient({
   jwksUri: 'https://digituz-corp.auth0.com/.well-known/jwks.json'
 });
 
-const players = [];
-
+const players = [
+  {
+    id: 'a1',
+    maxScore: 235,
+    name: 'Saul Wiggin',
+    picture: 'https://twitter.com/saulwiggin/profile_image'
+  }
+];
 const verifyPlayer = (token, cb) => {
   const uncheckedToken = jwt.decode(token, {complete: true});
   const kid = uncheckedToken.header.kid;
